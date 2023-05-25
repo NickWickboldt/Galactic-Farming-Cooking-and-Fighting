@@ -1,0 +1,372 @@
+@font-face {
+    font-family: recipe;
+    src: url(./fonts/Jakarta\ stylish.otf);
+}
+@font-face{
+    font-family: future;
+    src: url(./fonts/future.otf);
+}
+@font-face {
+    font-family: label;
+    src: url(./fonts/label.ttf);
+}
+*{
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    font-family: future;
+}
+.grid-1{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height:100vh;
+}
+.grid-2{
+    display:grid;
+    grid-template-rows: 30% 70%;
+    width:100%;
+}
+.grid-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height:100%;
+}
+.grid-4{
+    display:grid;
+    grid-template-columns: 70% 30%;
+    width:100%;
+}
+.grid-5{
+    display:grid;
+    grid-template-columns: 30% 40% 15% 15%;
+    width:100%;
+    height:100vh;
+}
+.grid-6{
+    display: grid;
+    grid-template-rows: 20% 40% 40%;
+    height: 100%;
+}
+.flex{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.index-link, .battlefield-link, .farm-link{
+    padding:2vmin;
+    font-size:1.8vmin;
+    border:solid darkslategray 1px;
+    background-color: aliceblue;
+    color:grey;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+a{
+    border:none;
+}
+.stove{
+    width:60%;
+    height:50%;
+    background-color: black;
+    align-self: flex-end;
+}
+.flex-stovebox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.farmland{
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: auto 0;
+    grid-gap:1vmin;
+    width:60%;
+    height:45%;
+    border:none;
+    background-color: green;
+}
+.plot{
+    width:100%;
+    height:100%;
+    border-radius:100%;
+    background-color: grey;
+}
+.stove:active{
+    background-color: brown;
+    transition: .15s ease;
+}
+.crop{
+    transition: 5s ease;
+    width:5px;
+    height:5px;
+    border-radius: 100%;
+    border:none;
+}
+.crop-button, .soil-button{
+    width: 80%;
+    height: 50%;
+    border-radius: 15%;
+    border:solid darkslategray 1px;
+    background-color: aliceblue;
+    color:grey;
+    font-size:3vmin;
+    transition: .3s ease;
+}
+.crop-button:hover, .soil-button:hover, .index-link:hover, .battlefield-link:hover, .farm-link:hover{
+    background-color: lightgray;
+    cursor:pointer;
+}
+.farm-title{
+    text-align: center;
+    font-size:7vmin;
+    color:black;
+    border:none;
+    font-weight:normal;
+    font-size:5vmin;
+}
+.pop-up{
+    visibility: hidden;
+    position: absolute;
+    top:20%;
+    left:50%;
+    transform: translate(-50%);
+    width:60%;
+    height:70vh;
+    background-color: aliceblue;
+    border:solid darkslategrey 1px;
+    z-index: 2;
+    border-radius: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.x-out-crop-shop, .x-out-soil-shop, .recipe-x{
+    position: absolute;
+    right:0;
+    top:0;
+    background-color: red;
+    width:4vmin;
+    height:4vmin;
+    border:none;
+    border-radius: 15%;
+    z-index: 2;
+    margin:1vmin;
+    font-size: 3vmin;
+    text-align: center;
+    font-weight: bold;
+}
+.x-out-crop-shop:hover, .x-out-soil-shop:hover, .recipe-x:hover{
+    cursor:pointer;
+}
+.shop-item{
+    width:15vmin;
+    height: 20vmin;
+    border:solid darkslategray 1px;
+    border-radius: 5%;
+}
+.flex-end{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding:2vmin;
+}
+.crop-storage, .recipe-storage{
+    position: absolute;
+    right:3vmin;
+    top:3vmin;
+    width:25%;
+    height:80%;
+    border:solid darkslategrey 1px;
+    background-color:grey;
+    z-index: 1;
+    border-radius: 5%;
+}
+.crop-storage-label, .recipe-storage-label{
+    text-align: center;
+    font-size:4vmin;
+    padding:1vmin;
+    border-bottom: solid darkslategrey 1px;
+}
+.crop-storage-crops, .recipe-storage-crops{
+    font-size:1.7vmin;
+    list-style-type: none;
+    text-align: center;
+    padding:2vmin;
+}
+.storage-crop, .recipe-label{
+    padding:.2vmin;
+    font-family: label;
+    font-size:3vmin;
+}
+.recipe-label{
+    font-size:1.5vmin;
+}
+.recipes{
+    position: absolute;
+    bottom:2vmin;
+    left:2vmin;
+    background-image: url("./images/wood-plank.jpeg");
+    height:10vmin;
+    width:25%;
+    background-size:cover;
+    border:none;
+    filter: brightness(60%);
+    transition: .3s ease;
+    font-size: 7vmin;
+    border-radius: 5%;
+    font-family: recipe;
+}
+.recipes:hover{
+    cursor:pointer;
+    filter: brightness(100%);
+}
+.recipes:active{
+    filter: brightness(80%);
+}
+.recipe-popup{
+    visibility: hidden;
+    position: absolute;
+    top:5%;
+    left:30%;
+    width:70vmin;
+    height:50vmin;
+    background-color: saddlebrown;
+    border:solid darkslategrey 1px;
+    border-radius: 5%;
+    z-index: 100;
+}
+.recipe-title{
+    text-align: center;
+    font-family: recipe;
+    font-size:5vmin;
+}
+.recipe-grid{
+    position: absolute;
+    top:15%;
+    left:0;
+    width:100%;
+    height:85%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.stove{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.oven-heater, .oven-window{
+    width: 90%;
+    height:90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+}
+
+.cooking{
+    height:70%;
+    width:100%;
+    border: solid 3px rgb(60, 60, 60);
+    background-color: rgb(37, 37, 37);
+}
+.steam{
+    position: absolute;
+    left:20%;
+    top:55vh;
+    width:60%;
+    height:20vmin;
+}
+#home-button{
+    align-self: flex-end;
+}
+.background{
+    width:100%;
+    height:100vh;
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: -2;
+}
+.explosion1{
+    position: absolute;
+    left:40%;
+    top:30%;
+    width:30vmin;
+}
+.explosion2{
+    position: absolute;
+    left:70%;
+    top:60%;
+    width:20vmin;
+}
+.bullets{
+    position: absolute;
+    transform: rotate(90deg);
+    left:25%;
+    top:-60%;
+    width:100vh;
+    height:100vw;
+    z-index: -1;
+}
+.ing-popup{
+    background-color: white;
+    width:30vmin;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1000;
+    visibility: hidden;
+    padding:1rem;
+    border-radius: 5%;
+}
+.ing-popup>li{
+    font-family: future;
+    font-size:1.8vmin;
+    color:darkgrey;
+    list-style-type: none;
+    text-align: center;
+    padding:.3rem;
+}
+.cooking-recipe{
+    position: absolute;
+    top:75%;
+    left:50%;
+    transform: translate(-50%);
+    z-index: 0;
+    width:15vmin;
+    height:15vmin;
+    filter: brightness(.5);
+    opacity: .5;
+}
+.monster-coins{
+    position: absolute;
+    top:2vmin;
+    right:40%;
+    font-size:2.5vmin;
+}
+.price-text{
+    position: absolute;
+    background-color: lightgrey;
+    border: solid black 1px;
+}
+.sell-text{
+    position: absolute;
+    background-color: lightgrey;
+    color:red;
+    border: solid black 1px;
+}
+
+.feed-button{
+    padding:.5vmin;
+    margin: .2vmin;
+    background-color: rgb(143, 70, 70);
+    border:solid grey 1px;
+    transition: .3s ease;
+    font-size:1.2vmin;
+}
+.feed-button:hover{
+    cursor:pointer;
+    background-color: rgb(143, 88, 88);
+    border:solid 1px black;
+}

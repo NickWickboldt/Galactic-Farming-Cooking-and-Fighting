@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThTh2 Clicker Game: Galactic Survival: Farming, Cooking, & Fighting</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./kitchen.js" defer type="module"></script>
+</head>
+<body  style="background-color: darkgrey;">
+    <div class="grid-1">
+        <div class="flex">
+            <div class="crop-storage" style="left:1vmin">
+                <h1 class="crop-storage-label">Crop Storage</h1>
+                <ul class="crop-storage-crops">
+                    <li class="storage-crop">Stinkweed </li>
+                        <li id="stinkweed">0</li>
+                    <li class="storage-crop">Blowflower </li>
+                        <li id="blowflower">0</li>
+                    <li class="storage-crop">Toxic Shrooms </li>
+                        <li id="toxicshrooms">0</li>
+                    <li class="storage-crop">Zucchini </li>
+                        <li id="zucchini">0</li>
+                    <li class="storage-crop">Purple Stalk </li>
+                        <li id="purplestalk">0</li>
+                    <li class="storage-crop">Quantum Onions </li>
+                        <li id="quantumonions">0</li>
+                    <li class="storage-crop">Tri-Stemmed Carrots </li>
+                        <li id="tristemmedcarrots">0</li>
+                    <li class="storage-crop">Green Glob Leaf </li>
+                        <li id="greenglobleaf">0</li>
+                    <li class="storage-crop">Green Tree </li>
+                        <li id="greentree">0</li>
+                </ul>
+            </div>
+            <button class="recipes">Recipes</button>
+        </div>
+        <div class="grid-2">
+            <div class="grid-3">
+                <div class="flex"></div>
+                <div class="flex"></div>
+                <div class="flex">
+                    <a style="align-self: flex-start;">
+                        <button class="farm-link">Farm</button>
+                    </a>
+                </div>
+            </div>
+            <div class="flex-stovebox">
+                <div class="stove">
+                    <img src="./images/steam.gif" alt="" class="steam">
+                    <div class="oven-heater">
+                        <div class="oven-window">
+                            <img src="./images/window1.png" alt="c" class="cooking">
+                        </div>
+                    </div>
+                </div>
+                <a href="./battlefield.html" id="home-button">
+                    <button class="battlefield-link">Battlefield</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="recipe-popup">
+        <h1 class="recipe-title">Recipes</h1>
+        <div class="recipe-grid"></div>
+        <div class="recipe-x">X</div>
+    </div>
+    <div class="recipe-storage" style="right:1vmin; top:10vmin;">
+        <h1 class="recipe-storage-label">Recipe Storage</h1>
+        <ul class="recipe-storage-crops">
+            <li class="recipe-label">Stinkweed Stew</li>
+                <li id="stinkweedStew">0</li>
+            <li class="recipe-label">Blowflower Bread</li>
+                <li id="blowflowerBread">0</li>
+            <li class="recipe-label">Toxic Pizza</li>
+                <li id="toxicPizza">0</li>
+            <li class="recipe-label">Quantum Burrito</li>
+                <li id="quantumBurrito">0</li>
+            <li class="recipe-label">Quantum Stew</li>
+                <li id="quantumStew">0</li>
+            <li class="recipe-label">Zucchini Ramen</li>
+                <li id="zucchiniRamen">0</li>
+            <li class="recipe-label">Greentree Smoothie</li>
+                <li id="greentreeSmoothie">0</li>
+            <li class="recipe-label">Super Salad</li>
+                <li id="superSalad">0</li>
+        </ul>
+    </div>
+</body>
+</html>
